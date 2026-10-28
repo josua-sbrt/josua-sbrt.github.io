@@ -1,0 +1,47 @@
+@font-face { font-family: "Michroma"; src: url("fonts/Michroma-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Plex Mono"; src: url("fonts/IBMPlexMono-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Plex Mono"; src: url("fonts/IBMPlexMono-Medium.ttf") format("truetype"); font-weight: 500; font-display: swap; }
+
+:root {
+  --paper: #f4f1ea;
+  --ink: #12100f;
+  --muted: #6b665f;
+  --line: #d9d3c7;
+  --seal: #c41e24;
+  --accent: #b8862b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Plex Mono", ui-monospace, monospace;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+main { max-width: 720px; margin: 0 auto; padding: 48px 20px 80px; }
+
+h1, h2, .wordmark { font-family: "Michroma", sans-serif; font-weight: 400; letter-spacing: 0.06em; }
+h1 { font-size: 26px; margin: 0 0 8px; }
+h2 { font-size: 17px; margin: 40px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+h3 { font-size: 15px; font-weight: 500; margin: 24px 0 4px; }
+p, li { color: var(--ink); }
+.muted { color: var(--muted); }
+a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+a:hover { color: var(--seal); }
+
+.logo { display: block; width: 260px; max-width: 70%; margin: 8px auto 0; }
+
+.game {
+  display: flex; gap: 20px; align-items: center;
+  margin: 40px 0; padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: #faf8f3;
+}
+.game img { width: 96px; height: 96px; border-radius: 22px; flex-shrink: 0; }
+.game h2 { border: 0; margin: 0; padding: 0; }
+
+nav { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 32px; font-size: 14px; }
+.lang { font-size: 14px; margin-bottom: 24px; }
+footer { margin-top: 56px; font-size: 13px; color: var(--muted); }
